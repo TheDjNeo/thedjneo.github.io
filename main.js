@@ -3,6 +3,11 @@ $("button.sync").on( "click", function( event ) {
   setTimeout(window.joyconJS.onSync, 1000, false);
 });
 
+$("button.a").on( "click", function( event ) {
+  window.joyconJS.onA(true, "a");
+  setTimeout(window.joyconJS.onA, 1000, false, "a");
+});
+
 var tmp = '[{"button":"a", "time":"5000"}, {"button":"b", "time":"100"}, {"button":"l", "time":"500"}]'
 
 var objs = JSON.parse(tmp);
