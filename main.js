@@ -4,8 +4,8 @@ $("button.sync").on( "click", function( event ) {
 });
 
 $("button.a").on( "click", function( event ) {
-  window.joyconJS.onA(true, "a");
-  setTimeout(window.joyconJS.onA, 1000, false, "a");
+  window.joyconJS.onA(true);
+  setTimeout(window.joyconJS.onA, 1000, false);
 });
 
 var tmp = '[{"button":"a", "time":"5000"}, {"button":"b", "time":"100"}, {"button":"l", "time":"500"}]'
@@ -17,16 +17,16 @@ $("button.start").on( "click", function( event ) {
   for(const obj of objs){
     switch(obj.button){
       case 'a':
-        window.joyconJS.onA(true, "a");
-        setTimeout(window.joyconJS.onA, obj.time, false, "a");
+        window.joyconJS.onA(true);
+        setTimeout(window.joyconJS.onA, obj.time, false);
         break;
       case 'b':
-        window.joyconJS.onB(true, "b");
-        setTimeout(window.joyconJS.onA, obj.time, false, "b");
+        window.joyconJS.onB(true);
+        setTimeout(window.joyconJS.onA, obj.time, false);
         break;
       case 'l':
         window.joyconJS.onL(true, "l");
-        setTimeout(window.joyconJS.onA, obj.time, false, "l");
+        setTimeout(window.joyconJS.onA, obj.time, false);
         break;
       }
     }
